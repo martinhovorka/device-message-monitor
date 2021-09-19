@@ -9,7 +9,7 @@ for PKG in $PKGS; do
     fi
 done
 
-if [ -f src/deviceMonitor/device-monitor ]; then
+if [ ! -f src/deviceMonitor/device-monitor ]; then
     cmake . && make -j 2
     [ $? -ne 0 ] && exit 1
 fi
