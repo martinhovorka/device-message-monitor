@@ -1,4 +1,5 @@
 #include "RestAPI.hpp"
+#include "../core/DataStorage.hpp"
 
 RestAPI *RestAPI::thisApi;
 
@@ -106,5 +107,6 @@ void RestAPI::postHandler(const std::shared_ptr<restbed::Session> session)
 ////////////////////////////////////////////////////////////////////////////////
 void RestAPI::getHandler(const std::shared_ptr<restbed::Session> session)
 {
-    session->close(restbed::OK, "Hello, World!", {{"Content-Length", "13"}});
+    const std::string &results(DataStorage::getResults());
+    session->close(restbed::OK, results);
 }

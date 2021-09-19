@@ -35,6 +35,8 @@ public:
         std::map<valueId, Value> measurements;
     };
 
+    DataStorage();
+
     /**
      * @brief add new record to the datastore
      *
@@ -43,13 +45,20 @@ public:
     void addRecord(AbstractAPI::pJsonMessage_t newRecord);
 
     /**
+     * @brief Get the Results object
+     *
+     * @return std::string
+     */
+    static std::string getResults();
+
+private:
+    /**
      * @brief all result in text format TODO: do it in JSON
      *
      * @return std::string
      */
-    std::string getResults();
+    std::string getResultString();
 
-private:
     /**
      * @brief add measurement record to the database
      *
@@ -75,6 +84,10 @@ private:
     std::mutex dataStoreLock;
     std::map<deviceId, DeviceRecord> dataStore;
     uint64_t totalCount = 0;
+
+    // WARNING: hack - quick solution how to access public interface from static context
+    // this will not work for multiple instances
+    static DataStorage *thisStorage;
 };
 
 #endif

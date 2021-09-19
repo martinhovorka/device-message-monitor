@@ -55,10 +55,11 @@ protected:
     static void postHandler(const std::shared_ptr<restbed::Session> session);
 
     /**
-     * @brief  HTTP GET method handler
-     *
+     * @brief Get the Handler object
+     * 
+     * @param session 
      */
-    static void getHandler(const std::shared_ptr<restbed::Session>);
+    static void getHandler(const std::shared_ptr<restbed::Session> session);
 
 private:
     const uint16_t port;
@@ -68,6 +69,7 @@ private:
     restbed::Service service;
 
     // WARNING: hack - quick solution how to access public interface from static context
+    // this will not work for multiple instances
     static RestAPI *thisApi;
 };
 

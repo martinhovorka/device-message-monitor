@@ -283,19 +283,17 @@ class Application:
 
         print()
         print("<<<<< GET /device/results >>>>>")
-        
+
         self.__connection.request(
             method="GET",
             url="/device/results"
         )
         response = self.__connection.getresponse()
 
-        print(response.read())
-        
+        print(str(response.read().decode('ascii')))
+
         if response.status != 200:
             print(response.status, response.reason)
-
-  
 
 ################################################################################
 

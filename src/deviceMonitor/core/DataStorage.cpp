@@ -1,5 +1,6 @@
 #include "DataStorage.hpp"
 
+DataStorage* DataStorage::thisStorage;
 const std::string DataStorage::key_name("name");
 const std::string DataStorage::key_current("current");
 const std::string DataStorage::key_voltage("voltage");
@@ -7,6 +8,12 @@ const std::string DataStorage::key_temperature("temperature");
 const DataStorage::valueId DataStorage::id_current(fnv::Fnv64a(key_current));
 const DataStorage::valueId DataStorage::id_voltage(fnv::Fnv64a(key_voltage));
 const DataStorage::valueId DataStorage::id_temperature(fnv::Fnv64a(key_temperature));
+
+////////////////////////////////////////////////////////////////////////////////
+DataStorage::DataStorage()
+{
+    thisStorage = this;
+}
 
 ////////////////////////////////////////////////////////////////////////////////
 void DataStorage::addRecord(AbstractAPI::pJsonMessage_t newRecord)
@@ -58,7 +65,7 @@ void DataStorage::addMeasurementRecord(
 }
 
 ////////////////////////////////////////////////////////////////////////////////
-std::string DataStorage::getResults()
+std::string DataStorage::getResultString()
 {
     std::lock_guard<std::mutex> lock(dataStoreLock);
     std::stringstream ss;
@@ -78,4 +85,10 @@ std::string DataStorage::getResults()
     ss << "grandTotal: " << totalCount << std::endl;
 
     return ss.str();
+}
+
+////////////////////////////////////////////////////////////////////////////////
+std::string DataStorage::getResults()
+{
+    return thisStorage->getResultString();
 }
