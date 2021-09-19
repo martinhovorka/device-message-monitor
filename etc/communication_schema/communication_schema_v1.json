@@ -1,0 +1,130 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "default": {
+        "name": "not_specified",
+        "timestamp": "1970-01-01T00:00:00.000UTC"
+    },
+    "required": [
+        "name",
+        "timestamp"
+    ],
+    "type": "object",
+    "properties": {
+        "name": {
+            "default": "not_specified",
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+$"
+        },
+        "timestamp": {
+            "type": "string",
+            "default": "1970-01-01T00:00:00.000000UTC",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{6}(UTC|Z)$"
+        },
+        "voltage": {
+            "type": "object",
+            "default": {
+                "value": 0,
+                "unit": "V",
+                "fault": ""
+            },
+            "required": [
+                "value",
+                "unit",
+                "fault"
+            ],
+            "properties": {
+                "value": {
+                    "type": "number",
+                    "default": 0
+                },
+                "unit": {
+                    "type": "string",
+                    "default": "V",
+                    "enum": [
+                        "volts",
+                        "V"
+                    ]
+                },
+                "fault": {
+                    "type": "string",
+                    "default": "",
+                    "enum": [
+                        "",
+                        "overvoltage",
+                        "undervoltage"
+                    ]
+                }
+            }
+        },
+        "current": {
+            "type": "object",
+            "default": {
+                "value": 0,
+                "unit": "A",
+                "fault": ""
+            },
+            "required": [
+                "value",
+                "unit",
+                "fault"
+            ],
+            "properties": {
+                "value": {
+                    "type": "number",
+                    "default": 0.0
+                },
+                "unit": {
+                    "type": "string",
+                    "title": "The unit schema",
+                    "default": "A",
+                    "enum": [
+                        "amperes",
+                        "A"
+                    ]
+                },
+                "fault": {
+                    "type": "string",
+                    "default": "",
+                    "enum": [
+                        "",
+                        "overcurrent"
+                    ]
+                }
+            }
+        },
+        "temperature": {
+            "type": "object",
+            "default": {
+                "value": 0.0,
+                "unit": "C",
+                "fault": ""
+            },
+            "required": [
+                "value",
+                "unit",
+                "fault"
+            ],
+            "properties": {
+                "value": {
+                    "type": "number",
+                    "default": 0.0
+                },
+                "unit": {
+                    "type": "string",
+                    "enum": [
+                        "C",
+                        "celsius"
+                    ]
+                },
+                "fault": {
+                    "type": "string",
+                    "default": "",
+                    "enum": [
+                        "",
+                        "overheat"
+                    ]
+                }
+            }
+        }
+    }
+}
