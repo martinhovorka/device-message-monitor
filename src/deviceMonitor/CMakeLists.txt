@@ -6,7 +6,8 @@ set(
 set(
     TARGET_SRCS
     deviceMonitor.cpp
-    AbstractAPI.cpp
+    apis/AbstractAPI.cpp
+    apis/RestAPI.cpp
 )
 
 set(
@@ -14,6 +15,7 @@ set(
     restbed
     fnv
     logger
+    signalhandler
 )
 
 include(${TEMPLATE_BINARY})

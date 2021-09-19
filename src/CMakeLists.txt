@@ -1,3 +1,4 @@
 add_subdirectory(liblogger)
 add_subdirectory(deviceMonitor)
 add_subdirectory(libfnv)
+add_subdirectory(libsignalhandler)

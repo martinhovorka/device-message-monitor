@@ -5,3 +5,4 @@
 liblogger.a
 *device-monitor
 *libfnv.a
+*libsignalhandler.a
