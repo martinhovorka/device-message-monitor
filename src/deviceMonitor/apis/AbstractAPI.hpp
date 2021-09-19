@@ -23,20 +23,20 @@ public:
 
     /**
      * @brief Construct a new Abstract API object
-     * 
+     *
      * @param schema json schema for current API
      */
     AbstractAPI(const std::string &schema);
 
     /**
      * @brief Destroy the Abstract API object
-     * 
+     *
      */
     virtual ~AbstractAPI(void);
 
     /**
      * @brief common implementation of API start procedure
-     * 
+     *
      * @return true API started successfully
      * @return false if API did not start
      */
@@ -44,13 +44,13 @@ public:
 
     /**
      * @brief stop API and deallocate resources
-     * 
+     *
      */
     void stop(void);
 
     /**
      * @brief Get the next message in message queue
-     * 
+     *
      * @return pJsonMessage_t or nullptr if queue is empty
      */
     pJsonMessage_t getNextMessage(void);
@@ -58,7 +58,7 @@ public:
 protected:
     /**
      * @brief checks if json document/message is valid by give JSON schema
-     * 
+     *
      * @param document checked JSON
      * @return true if valid
      * @return false if not valid and/or schema is not loaded
@@ -67,7 +67,7 @@ protected:
 
     /**
      * @brief add newly received message to queue
-     * 
+     *
      * @param newMessage newly received message
      * @return true if pushed successfully
      * @return false on error
@@ -76,7 +76,7 @@ protected:
 
     /**
      * @brief deviced APIs will implement setup procedures
-     * 
+     *
      * @return true on success
      * @return false  on failure
      */
@@ -84,35 +84,35 @@ protected:
 
     /**
      * @brief derived APIs will implement shutdown procedures
-     * 
-     * @return true 
-     * @return false 
+     *
+     * @return true
+     * @return false
      */
     virtual bool shutdownApi(void) = 0;
 
     /**
      * @brief derived API will implement its runtime
-     * 
+     *
      */
     virtual void run(void) = 0;
 
 private:
     /**
      * @brief loads json schema for validation on given API
-     * 
+     *
      */
     void loadJSONSchema(void);
 
     /**
      * @brief thread body representation - a simple loop with no delay
-     * 
-     * @param thisApi 
+     *
+     * @param thisApi
      */
     static void threadBody(AbstractAPI *thisApi);
 
     /**
      * @brief safely returns flag if thread should continue to work
-     * 
+     *
      * @return true thread should run
      * @return false thread should terminate
      */
@@ -120,7 +120,7 @@ private:
 
     /**
      * @brief safely sets flag if thread should continue to work
-     * 
+     *
      * @param value flag value
      */
     void setRunFlag(const bool value);

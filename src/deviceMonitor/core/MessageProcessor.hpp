@@ -13,87 +13,63 @@
 class MessageProcessor
 {
 public:
-    MessageProcessor(AbstractAPI *api) : api(api)
-    {
-    }
+    /**
+     * @brief Construct message processor
+     *
+     * @param api api from which will message processor read data
+     */
+    MessageProcessor(AbstractAPI *api);
 
-    bool start(void)
-    {
-        try
-        {
-            setRunFlag(true);
-            processorThread = new std::thread(threadBody, this);
-        }
-        catch (const std::exception &e)
-        {
-            setRunFlag(false);
-            LOG_FMT_FTL("failed to allocate thread memory: %s", e.what());
-            return false;
-        }
+    /**
+     * @brief start message processor thread
+     *
+     * @return true on success
+     * @return false on failure
+     */
+    bool start(void);
 
-        return true;
-    }
+    /**
+     * @brief stop message processor
+     *
+     */
+    void stop(void);
 
-    void stop(void)
-    {
-        setRunFlag(false);
+    /**
+     * @brief static method for API to notify message processor that new data are available
+     *
+     */
+    static void notify();
 
-        notify();
-
-        if (processorThread != nullptr)
-        {
-            processorThread->join();
-            delete processorThread;
-            processorThread = nullptr;
-        }
-    }
-
-    static void notify()
-    {
-        std::unique_lock<std::mutex> lock(processLock);
-        processCondition.notify_all();
-    }
-
-    static void threadBody(MessageProcessor *thisProcessor)
-    {
-        AbstractAPI::pJsonMessage_t message;
-
-        while (thisProcessor->getRunFlag())
-        {
-            {
-                std::unique_lock<std::mutex> lock(processLock);
-                message = thisProcessor->getApi()->getNextMessage();
-                if (message == nullptr)
-                {
-                    processCondition.wait(lock);
-                    continue;
-                }
-            }
-
-            rapidjson::OStreamWrapper osw(std::cout);
-            rapidjson::Writer<rapidjson::OStreamWrapper> writer(osw);
-            message->Accept(writer);
-        }
-    }
-
-    bool getRunFlag()
-    {
-        std::lock_guard<std::mutex> lock(runFlagLock);
-        return runFlag;
-    }
-
-    void setRunFlag(const bool value)
-    {
-        std::lock_guard<std::mutex> lock(runFlagLock);
-        runFlag = value;
-    }
-
-    AbstractAPI *getApi()
-    {
-        return api;
-    }
+    /**
+     * @brief Get the Data Store object
+     *
+     * @return const DataStorage&
+     */
+    DataStorage &getDataStore();
 
 private:
+    /**
+     * @brief thread body implementation
+     *
+     * @param thisProcessor
+     */
+    static void threadBody(MessageProcessor *thisProcessor);
+
+    /**
+     * @brief get flag that indicates
+     *
+     * @return true
+     * @return false
+     */
+    bool getRunFlag();
+
+    /**
+     * @brief Set the Run Flag object
+     *
+     * @param value
+     */
+    void setRunFlag(const bool value);
+
     AbstractAPI *api;
     DataStorage ds;
 

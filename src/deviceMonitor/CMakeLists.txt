@@ -10,6 +10,7 @@ set(
     apis/AbstractAPI.cpp
     apis/RestAPI.cpp
     core/MessageProcessor.cpp
+    core/DataStorage.cpp
 )
 
 set(

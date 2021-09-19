@@ -34,7 +34,6 @@ int Application::run(void)
         return EXIT_FAILURE;
     }
 
-    // FIXME: determine sequnce to prevent memory faults
     processor->stop();
     delete processor;
     processor = nullptr;

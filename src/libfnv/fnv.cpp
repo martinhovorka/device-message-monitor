@@ -2,7 +2,7 @@
 
 namespace fnv
 {
-    fnv64_t getFnv64Hash(const std::string& str)
+    fnv64_t Fnv64a(const std::string& str)
     {
         fnv64_t hash((fnv64_t)(0xcbf29ce484222325ULL));
 

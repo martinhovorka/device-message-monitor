@@ -6,9 +6,9 @@
 #include <iostream>
 
 /**
- * @brief 
- * 
- * @param signum 
+ * @brief
+ *
+ * @param signum
  */
 void signalHandler(const int signum)
 {
@@ -17,8 +17,8 @@ void signalHandler(const int signum)
 }
 
 /**
- * @brief 
- * 
+ * @brief
+ *
  */
 void exitProcedure(void)
 {
@@ -26,9 +26,9 @@ void exitProcedure(void)
 }
 
 /**
- * @brief 
- * 
- * @return int 
+ * @brief
+ *
+ * @return int
  */
 int initProcedure(void)
 {

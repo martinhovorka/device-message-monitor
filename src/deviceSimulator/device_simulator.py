@@ -215,7 +215,7 @@ class Application:
 
     def __init__(self,
                  max_random_devices=100,
-                 runtime=10,
+                 runtime=1,
                  timeout=0.001,
                  address="127.0.0.1",
                  port=50000,
@@ -280,6 +280,22 @@ class Application:
             print(_.measurements)
             grand_total += _.measurements.total_count
         print("GRAND TOTAL", grand_total)
+
+        print()
+        print("<<<<< GET /device/results >>>>>")
+        
+        self.__connection.request(
+            method="GET",
+            url="/device/results"
+        )
+        response = self.__connection.getresponse()
+
+        print(response.read())
+        
+        if response.status != 200:
+            print(response.status, response.reason)
+
+  
 
 ################################################################################
 

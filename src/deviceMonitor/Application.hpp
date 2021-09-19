@@ -14,34 +14,34 @@ public:
     Application &operator=(const Application &) = delete;
 
     /**
-     * @brief 
-     * 
-     * @return Application& 
+     * @brief
+     *
+     * @return Application&
      */
     static Application &get(void);
 
     /**
-     * @brief 
-     * 
+     * @brief
+     *
      */
     int run(void);
 
     /**
-     * @brief 
-     * 
+     * @brief
+     *
      */
     void stop(void);
 
 private:
     /**
      * @brief Construct a new Application object
-     * 
+     *
      */
     Application();
 
     /**
      * @brief Destroy the Application object
-     * 
+     *
      */
     ~Application();
 

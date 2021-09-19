@@ -6,7 +6,8 @@ RestAPI *RestAPI::thisApi;
 RestAPI::RestAPI(const std::string &schema, const uint16_t port) : AbstractAPI(schema),
                                                                    port(port),
                                                                    settings(std::make_shared<restbed::Settings>()),
-                                                                   resource(std::make_shared<restbed::Resource>())
+                                                                   resourcePost(std::make_shared<restbed::Resource>()),
+                                                                   resourceGet(std::make_shared<restbed::Resource>())
 {
     thisApi = this;
 }
@@ -15,15 +16,18 @@ RestAPI::RestAPI(const std::string &schema, const uint16_t port) : AbstractAPI(s
 bool RestAPI::setupApi()
 try
 {
-
     settings->set_port(port);
     settings->set_default_header("Connection", "close");
 
-    resource->set_path("/device/measurement");
-    resource->set_method_handler("POST", postHandler);
-    resource->set_method_handler("GET", getHandler);
+    // FIXME: only for demonstration purposes; need update
+    resourcePost->set_path("/device/measurement");
+    resourcePost->set_method_handler("POST", postHandler);
 
-    service.publish(resource);
+    resourceGet->set_path("/device/results");
+    resourceGet->set_method_handler("GET", getHandler);
+
+    service.publish(resourcePost);
+    service.publish(resourceGet);
 
     return true;
 }
@@ -95,13 +99,12 @@ void RestAPI::postHandler(const std::shared_ptr<restbed::Session> session)
                            return;
                        }
 
-                       // LOG_FMT_DBG("%s", buffer.c_str());
-
                        session->close(restbed::OK);
                    });
 }
 
 ////////////////////////////////////////////////////////////////////////////////
-void RestAPI::getHandler(const std::shared_ptr<restbed::Session>)
+void RestAPI::getHandler(const std::shared_ptr<restbed::Session> session)
 {
+    session->close(restbed::OK, "Hello, World!", {{"Content-Length", "13"}});
 }
