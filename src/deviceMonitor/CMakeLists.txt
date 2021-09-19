@@ -5,9 +5,11 @@ set(
 
 set(
     TARGET_SRCS
-    deviceMonitor.cpp
+    main.cpp
+    Application.cpp
     apis/AbstractAPI.cpp
     apis/RestAPI.cpp
+    core/MessageProcessor.cpp
 )
 
 set(

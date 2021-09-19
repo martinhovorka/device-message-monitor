@@ -16,7 +16,6 @@
 #include <string>
 #include <thread>
 
-
 class AbstractAPI
 {
 public:
@@ -27,18 +26,13 @@ public:
      * 
      * @param schema json schema for current API
      */
-    AbstractAPI(const std::string &schema) : jsonSchema(schema)
-    {
-        loadJSONSchema();
-    }
+    AbstractAPI(const std::string &schema);
 
     /**
      * @brief Destroy the Abstract API object
      * 
      */
-    virtual ~AbstractAPI(void)
-    {
-    }
+    virtual ~AbstractAPI(void);
 
     /**
      * @brief common implementation of API start procedure
@@ -46,72 +40,22 @@ public:
      * @return true API started successfully
      * @return false if API did not start
      */
-    bool start(void)
-    {
-        if (!validatorInitialized)
-        {
-            LOG_MSG_ERR("unable to start API, JSON validator not initialized");
-            return false;
-        }
-
-        if (!setupApi())
-        {
-            LOG_MSG_FTL("failed to setup API");
-            return false;
-        }
-
-        try
-        {
-            setRunFlag(true);
-            apiThread = new std::thread(threadBody, this);
-        }
-        catch (const std::exception &e)
-        {
-            setRunFlag(false);
-            LOG_FMT_FTL("failed to allocate thread memory: %s", e.what());
-            return false;
-        }
-
-        return true;
-    }
+    bool start(void);
 
     /**
      * @brief stop API and deallocate resources
      * 
      */
-    void stop(void)
-    {
-        setRunFlag(false);
-
-        shutdownApi();
-
-        if (apiThread != nullptr)
-        {
-            apiThread->join();
-            delete apiThread;
-            apiThread = nullptr;
-        }
-    }
+    void stop(void);
 
     /**
      * @brief Get the next message in message queue
      * 
-     * @return pJsonMessage_t or nullptr of message is empty
+     * @return pJsonMessage_t or nullptr if queue is empty
      */
-    pJsonMessage_t getNextMessage(void)
-    {
-        std::lock_guard<std::mutex> lock(queueLock);
+    pJsonMessage_t getNextMessage(void);
 
-        if (messageQueue.empty())
-        {
-            return pJsonMessage_t(nullptr);
-        }
-
-        pJsonMessage_t messageToGet(messageQueue.front());
-        messageQueue.pop();
-        return messageToGet;
-    }
-
+protected:
     /**
      * @brief checks if json document/message is valid by give JSON schema
      * 
@@ -119,16 +63,7 @@ public:
      * @return true if valid
      * @return false if not valid and/or schema is not loaded
      */
-    bool isValidJSON(rapidjson::Document &document)
-    {
-        if (!validatorInitialized)
-        {
-            LOG_MSG_ERR("JSON validator not initialized; unable to check JSON message");
-            return false;
-        }
-
-        return document.Accept(*pSchemaValidator);
-    }
+    bool isValidJSON(rapidjson::Document &document);
 
     /**
      * @brief add newly received message to queue
@@ -137,36 +72,26 @@ public:
      * @return true if pushed successfully
      * @return false on error
      */
-    bool pushNewMessage(pJsonMessage_t newMessage)
-    try
-    {
-        std::lock_guard<std::mutex> lock(queueLock);
-        messageQueue.push(newMessage);
-        return true;
-    }
-    catch (std::exception &ex)
-    {
-        LOG_FMT_ERR("unable to push new message to queue; error %s", ex.what());
-        return false;
-    }
+    bool pushNewMessage(pJsonMessage_t newMessage);
 
-protected:
     /**
-     * @brief 
+     * @brief deviced APIs will implement setup procedures
      * 
-     * @return true 
-     * @return false 
+     * @return true on success
+     * @return false  on failure
      */
     virtual bool setupApi(void) = 0;
 
     /**
-     * @brief 
+     * @brief derived APIs will implement shutdown procedures
      * 
+     * @return true 
+     * @return false 
      */
     virtual bool shutdownApi(void) = 0;
 
     /**
-     * @brief 
+     * @brief derived API will implement its runtime
      * 
      */
     virtual void run(void) = 0;
@@ -176,71 +101,29 @@ private:
      * @brief loads json schema for validation on given API
      * 
      */
-    void loadJSONSchema(void)
-    try
-    {
-        // prepare input streams
-        std::ifstream inputFileStream(jsonSchema);
-        rapidjson::IStreamWrapper inputStreamWrapper(inputFileStream);
-
-        // load JSON schema and validate for errors
-        rapidjson::Document jsonDocument;
-        if (jsonDocument.ParseStream(inputStreamWrapper).HasParseError())
-        {
-            LOG_FMT_FTL("invalid json schema; error %d; offset: %d", jsonDocument.GetParseError(), jsonDocument.GetErrorOffset());
-            return;
-        }
-
-        // load schema document
-        pSchemaDocument = std::unique_ptr<rapidjson::SchemaDocument>(new rapidjson::SchemaDocument(jsonDocument));
-
-        // load schema validator
-        pSchemaValidator = std::unique_ptr<rapidjson::SchemaValidator>(new rapidjson::SchemaValidator(*pSchemaDocument));
-        validatorInitialized = true;
-    }
-    catch (const std::exception &ex)
-    {
-        LOG_FMT_FTL("unable to load JSON schema", ex.what());
-        validatorInitialized = false;
-    }
+    void loadJSONSchema(void);
 
     /**
-     * @brief 
+     * @brief thread body representation - a simple loop with no delay
      * 
      * @param thisApi 
      */
-    static void threadBody(AbstractAPI *thisApi)
-    {
-        while (thisApi->getRunFlag())
-        {
-            thisApi->run();
-        }
-    }
+    static void threadBody(AbstractAPI *thisApi);
 
     /**
-     * @brief Get the Run Flag object
+     * @brief safely returns flag if thread should continue to work
      * 
-     * @return true 
-     * @return false 
+     * @return true thread should run
+     * @return false thread should terminate
      */
-    bool getRunFlag()
-    {
-        std::lock_guard<std::mutex> lock(runFlagLock);
-        return runFlag;
-    }
+    bool getRunFlag();
 
     /**
-     * @brief Set the Run Flag object
+     * @brief safely sets flag if thread should continue to work
      * 
-     * @param value 
-     * @return true 
-     * @return false 
+     * @param value flag value
      */
-    void setRunFlag(const bool value)
-    {
-        std::lock_guard<std::mutex> lock(runFlagLock);
-        runFlag = value;
-    }
+    void setRunFlag(const bool value);
 
     const std::string jsonSchema;
     bool validatorInitialized = false;

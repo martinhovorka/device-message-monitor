@@ -41,7 +41,6 @@
                     "type": "string",
                     "default": "V",
                     "enum": [
-                        "volts",
                         "V"
                     ]
                 },
@@ -78,7 +77,6 @@
                     "title": "The unit schema",
                     "default": "A",
                     "enum": [
-                        "amperes",
                         "A"
                     ]
                 },
@@ -112,8 +110,7 @@
                 "unit": {
                     "type": "string",
                     "enum": [
-                        "C",
-                        "celsius"
+                        "C"
                     ]
                 },
                 "fault": {
