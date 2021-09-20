@@ -1,0 +1,16 @@
+<map id="initProcedure" name="initProcedure">
+<area shape="rect" id="node2" href="$d9/db5/classsighandler_1_1_signal_handler.html#a9414881bcdac4fbb6c3f4c560812e5e7" title="get singleton instance " alt="" coords="152,68,348,95"/>
+<area shape="rect" id="node3" href="$de/d27/_logger_8cpp.html#aeda367459d679e6d5d4476e7d7aa3963" title="initialize logger for usage " alt="" coords="201,119,299,145"/>
+<area shape="rect" id="node13" href="$df/d0a/main_8cpp.html#adad1029c9dc4631507923fa3ed8ba868" title="signalHandler" alt="" coords="199,195,301,221"/>
+<area shape="rect" id="node4" href="$de/d27/_logger_8cpp.html#a7b0614b46b009eec456e166c4010757e" title="lockLoggerData" alt="" coords="577,157,691,184"/>
+<area shape="rect" id="node5" href="$de/d27/_logger_8cpp.html#aeeb83b8b6ec1dbdf1a3e72fc836caef6" title="unlockLoggerData" alt="" coords="571,5,697,32"/>
+<area shape="rect" id="node6" href="$de/d27/_logger_8cpp.html#aa4df9360b15f4315ce68c9dc16bbd996" title="loggerThreadBody" alt="" coords="396,93,523,120"/>
+<area shape="rect" id="node7" href="$de/d27/_logger_8cpp.html#adba7e7852defaa150e7be9b81114fd62" title="popMessage" alt="" coords="586,56,682,83"/>
+<area shape="rect" id="node10" href="$de/d27/_logger_8cpp.html#a11eaecfa4e0eaee60ec32d2aa435f0ef" title="writeMessage" alt="" coords="583,107,685,133"/>
+<area shape="rect" id="node8" href="$de/d27/_logger_8cpp.html#a16c9d4e11162a42fdf0c5a47f4797336" title="lockLoggerQueue" alt="" coords="753,5,875,32"/>
+<area shape="rect" id="node9" href="$de/d27/_logger_8cpp.html#aa47defada9b881330abec76ff50b017c" title="unlockLoggerQueue" alt="" coords="745,56,883,83"/>
+<area shape="rect" id="node11" href="$de/d27/_logger_8cpp.html#a295eb774fde642a4021e2c059844bb69" title="lockStream" alt="" coords="770,107,858,133"/>
+<area shape="rect" id="node12" href="$de/d27/_logger_8cpp.html#a923bd0383982e840b71866e794fa1405" title="unlockStream" alt="" coords="763,157,865,184"/>
+<area shape="rect" id="node14" href="$de/d6b/class_application.html#a46e8ee5d5e4d04679c826ad23a287f2b" title="Application::get" alt="" coords="403,245,515,272"/>
+<area shape="rect" id="node15" href="$de/d6b/class_application.html#a7a9e487106abcd163331ad98910cc48f" title="Application::stop" alt="" coords="400,195,519,221"/>
+</map>

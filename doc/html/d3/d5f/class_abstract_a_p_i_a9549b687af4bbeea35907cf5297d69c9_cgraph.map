@@ -1,0 +1,7 @@
+<map id="AbstractAPI::start" name="AbstractAPI::start">
+<area shape="rect" id="node2" href="$d3/d5f/class_abstract_a_p_i.html#ada2e62db474de8b3aa0ea04e1d759d2e" title="safely sets flag if thread should continue to work " alt="" coords="180,5,348,32"/>
+<area shape="rect" id="node3" href="$d3/d5f/class_abstract_a_p_i.html#aaa52851cc8c8e3b49f134b323b9a4507" title="deviced APIs will implement setup procedures " alt="" coords="188,56,340,83"/>
+<area shape="rect" id="node4" href="$d3/d5f/class_abstract_a_p_i.html#a68737cfef2126eddc4f9f2ba4158e4d9" title="thread body representation &#45; a simple loop with no delay " alt="" coords="181,107,347,133"/>
+<area shape="rect" id="node5" href="$d3/d5f/class_abstract_a_p_i.html#a3a221fec07fb867640f701bf3113bee2" title="safely returns flag if thread should continue to work " alt="" coords="396,81,564,108"/>
+<area shape="rect" id="node6" href="$d3/d5f/class_abstract_a_p_i.html#afb7effe52a40bc6ba22120797fd6133b" title="derived API will implement its runtime " alt="" coords="421,132,539,159"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="src/deviceMonitor/middleware" name="src/deviceMonitor/middleware">
+<area shape="rect" id="node1" href="dir_2edc76574d9c7eeb7a6f4c171dba9a67.html" title="middleware" alt="" coords="27,52,115,100"/>
+<area shape="rect" id="node2" href="dir_7b8483bbab21622dc7ccd6728ba38ea1.html" title="apis" alt="" coords="139,52,211,100"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000003_000002.html" title="1" alt="" coords="116,60,124,75"/>
+<area shape="rect" id="node3" href="dir_cc0e5e499638d02e7245d231465f7c44.html" title="storage" alt="" coords="139,148,211,196"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000003_000004.html" title="1" alt="" coords="137,122,145,137"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000002_000003.html" title="1" alt="" coords="129,77,137,92"/>
+<area shape="rect" id="edge4-headlabel" href="dir_000002_000004.html" title="1" alt="" coords="170,121,178,136"/>
+<area shape="rect" id="edge5-headlabel" href="dir_000004_000002.html" title="1" alt="" coords="171,112,179,126"/>
+<area shape="rect" id="clust1" href="dir_996c030acc57259aaa9f767d04c3ce1d.html" title="deviceMonitor" alt="" coords="16,16,125,111"/>
+</map>

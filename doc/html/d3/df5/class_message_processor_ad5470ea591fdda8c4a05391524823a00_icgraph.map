@@ -1,0 +1,8 @@
+<map id="MessageProcessor::notify" name="MessageProcessor::notify">
+<area shape="rect" id="node2" href="$d3/d5f/class_abstract_a_p_i.html#a1ba086582a2251e3393ddd2c66d2d153" title="add newly received message to queue " alt="" coords="228,5,437,32"/>
+<area shape="rect" id="node5" href="$d3/df5/class_message_processor.html#af438aaa750f77f32edb7ca09bebd1c46" title="stop message processor " alt="" coords="249,56,416,83"/>
+<area shape="rect" id="node3" href="$d0/dcd/class_rest_a_p_i.html#a84de7abd0de9d4b9998f33de4c517386" title="HTTP POST method handler. " alt="" coords="485,5,636,32"/>
+<area shape="rect" id="node4" href="$d0/dcd/class_rest_a_p_i.html#ab61327d4e8fd3e38355f653650e6ac94" title="perform API setup " alt="" coords="684,5,815,32"/>
+<area shape="rect" id="node6" href="$de/d6b/class_application.html#a7fbff10e3b66542f549f6c693ec4e676" title="Application::run" alt="" coords="505,56,617,83"/>
+<area shape="rect" id="node7" href="$df/d0a/main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="724,56,775,83"/>
+</map>

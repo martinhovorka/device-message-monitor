@@ -1,0 +1,4 @@
+<map id="AbstractAPI::stop" name="AbstractAPI::stop">
+<area shape="rect" id="node2" href="$d3/d5f/class_abstract_a_p_i.html#ada2e62db474de8b3aa0ea04e1d759d2e" title="safely sets flag if thread should continue to work " alt="" coords="184,5,352,32"/>
+<area shape="rect" id="node3" href="$d3/d5f/class_abstract_a_p_i.html#a0dc4dff87790e5009577d6a6153c7faf" title="derived APIs will implement shutdown procedures " alt="" coords="180,56,356,83"/>
+</map>

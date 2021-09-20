@@ -1,0 +1,8 @@
+<map id="writeMessage" name="writeMessage">
+<area shape="rect" id="node2" href="$d3/de3/_logger_8hpp.html#a664f9cf48341e0b23122227e55a620b6" title="function de&#45;initializes logger (writes all remaining message to stream a release resources) ..." alt="" coords="171,5,267,32"/>
+<area shape="rect" id="node5" href="$de/d27/_logger_8cpp.html#aa4df9360b15f4315ce68c9dc16bbd996" title="loggerThreadBody" alt="" coords="156,56,283,83"/>
+<area shape="rect" id="node3" href="$df/d0a/main_8cpp.html#a0ae2256c09ff62743965e0e07f582b3f" title="exitProcedure" alt="" coords="477,5,580,32"/>
+<area shape="rect" id="node4" href="$df/d0a/main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="628,31,679,57"/>
+<area shape="rect" id="node6" href="$d3/de3/_logger_8hpp.html#aeda367459d679e6d5d4476e7d7aa3963" title="initialize logger for usage " alt="" coords="331,56,429,83"/>
+<area shape="rect" id="node7" href="$df/d0a/main_8cpp.html#a59a5d10c3e8acb2a11dad76e5d644020" title="initProcedure" alt="" coords="479,56,578,83"/>
+</map>

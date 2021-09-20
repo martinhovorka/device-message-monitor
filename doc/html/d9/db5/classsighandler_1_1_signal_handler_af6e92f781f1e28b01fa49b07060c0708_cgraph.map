@@ -1,0 +1,4 @@
+<map id="sighandler::SignalHandler::setAllHandlers" name="sighandler::SignalHandler::setAllHandlers">
+<area shape="rect" id="node2" href="$d9/db5/classsighandler_1_1_signal_handler.html#af2019408ee7ba2b36f1bf1fb61e64c16" title="check if signal number is within correct boundaries and it is not unmaskable signals ..." alt="" coords="443,5,613,47"/>
+<area shape="rect" id="node3" href="$d9/db5/classsighandler_1_1_signal_handler.html#a77911d973919274e62f35e6226613213" title="set neẃ signal handler saving the previoius one " alt="" coords="224,35,395,76"/>
+</map>

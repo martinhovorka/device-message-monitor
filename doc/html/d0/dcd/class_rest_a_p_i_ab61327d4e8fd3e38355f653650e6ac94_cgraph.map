@@ -1,0 +1,8 @@
+<map id="RestAPI::setupApi" name="RestAPI::setupApi">
+<area shape="rect" id="node2" href="$d0/dcd/class_rest_a_p_i.html#a8c833316cd57b897b64f12c694063199" title="Get the Handler object. " alt="" coords="188,5,331,32"/>
+<area shape="rect" id="node4" href="$d0/dcd/class_rest_a_p_i.html#a84de7abd0de9d4b9998f33de4c517386" title="HTTP POST method handler. " alt="" coords="184,56,335,83"/>
+<area shape="rect" id="node3" href="$db/d85/class_data_storage.html#af9579c2c18cf1fe73f91ffec1dd89a8f" title="Get the Results object. " alt="" coords="404,5,571,32"/>
+<area shape="rect" id="node5" href="$d3/d5f/class_abstract_a_p_i.html#a3e5de4171c5ae4316b90150a2ed9036a" title="checks if json document/message is valid by give JSON schema " alt="" coords="399,56,575,83"/>
+<area shape="rect" id="node6" href="$d3/d5f/class_abstract_a_p_i.html#a1ba086582a2251e3393ddd2c66d2d153" title="add newly received message to queue " alt="" coords="383,107,592,133"/>
+<area shape="rect" id="node7" href="$d3/df5/class_message_processor.html#ad5470ea591fdda8c4a05391524823a00" title="static method for API to notify message processor that new data are available " alt="" coords="640,107,815,133"/>
+</map>

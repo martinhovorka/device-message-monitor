@@ -1,0 +1,5 @@
+<map id="RestAPI::postHandler" name="RestAPI::postHandler">
+<area shape="rect" id="node2" href="$d3/d5f/class_abstract_a_p_i.html#a3e5de4171c5ae4316b90150a2ed9036a" title="checks if json document/message is valid by give JSON schema " alt="" coords="221,5,397,32"/>
+<area shape="rect" id="node3" href="$d3/d5f/class_abstract_a_p_i.html#a1ba086582a2251e3393ddd2c66d2d153" title="add newly received message to queue " alt="" coords="204,56,413,83"/>
+<area shape="rect" id="node4" href="$d3/df5/class_message_processor.html#ad5470ea591fdda8c4a05391524823a00" title="static method for API to notify message processor that new data are available " alt="" coords="461,56,636,83"/>
+</map>

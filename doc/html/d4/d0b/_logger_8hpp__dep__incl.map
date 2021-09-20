@@ -1,0 +1,14 @@
+<map id="src/liblogger/Logger.hpp" name="src/liblogger/Logger.hpp">
+<area shape="rect" id="node2" href="$d6/d8f/_abstract_a_p_i_8hpp.html" title="src/deviceMonitor/apis\l/AbstractAPI.hpp" alt="" coords="416,80,569,121"/>
+<area shape="rect" id="node5" href="$d2/dcb/_application_8hpp.html" title="src/deviceMonitor/Application.hpp" alt="" coords="402,266,621,293"/>
+<area shape="rect" id="node7" href="$df/d0a/main_8cpp.html" title="src/deviceMonitor/main.cpp" alt="" coords="941,348,1124,375"/>
+<area shape="rect" id="node9" href="$df/d16/_rest_a_p_i_8hpp.html" title="src/deviceMonitor/apis\l/RestAPI.hpp" alt="" coords="841,169,995,211"/>
+<area shape="rect" id="node11" href="$d7/d83/_data_storage_8hpp.html" title="src/deviceMonitor/storage\l/DataStorage.hpp" alt="" coords="645,169,817,211"/>
+<area shape="rect" id="node13" href="$de/d27/_logger_8cpp.html" title="src/liblogger/Logger.cpp" alt="" coords="1121,87,1281,114"/>
+<area shape="rect" id="node3" href="$d6/db0/_abstract_a_p_i_8cpp.html" title="src/deviceMonitor/apis\l/AbstractAPI.cpp" alt="" coords="5,259,159,300"/>
+<area shape="rect" id="node4" href="$d8/dc9/_message_processor_8hpp.html" title="src/deviceMonitor/middleware\l/MessageProcessor.hpp" alt="" coords="231,169,426,211"/>
+<area shape="rect" id="node8" href="$d4/d7b/_message_processor_8cpp.html" title="src/deviceMonitor/middleware\l/MessageProcessor.cpp" alt="" coords="183,259,378,300"/>
+<area shape="rect" id="node6" href="$d0/d42/_application_8cpp.html" title="src/deviceMonitor/Application.cpp" alt="" coords="402,348,621,375"/>
+<area shape="rect" id="node10" href="$d0/d9b/_rest_a_p_i_8cpp.html" title="src/deviceMonitor/apis\l/RestAPI.cpp" alt="" coords="841,259,995,300"/>
+<area shape="rect" id="node12" href="$dc/d79/_data_storage_8cpp.html" title="src/deviceMonitor/storage\l/DataStorage.cpp" alt="" coords="645,259,817,300"/>
+</map>

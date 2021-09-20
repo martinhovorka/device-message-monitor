@@ -1,0 +1,10 @@
+<map id="lockStream" name="lockStream">
+<area shape="rect" id="node2" href="$d3/de3/_logger_8hpp.html#a7c9006aee32a6c57e648152d290c2c2d" title="lock logger stream to perform other operations " alt="" coords="141,5,289,32"/>
+<area shape="rect" id="node3" href="$de/d27/_logger_8cpp.html#a11eaecfa4e0eaee60ec32d2aa435f0ef" title="writeMessage" alt="" coords="164,56,267,83"/>
+<area shape="rect" id="node4" href="$de/d27/_logger_8cpp.html#aa4df9360b15f4315ce68c9dc16bbd996" title="loggerThreadBody" alt="" coords="337,31,464,57"/>
+<area shape="rect" id="node8" href="$d3/de3/_logger_8hpp.html#a664f9cf48341e0b23122227e55a620b6" title="function de&#45;initializes logger (writes all remaining message to stream a release resources) ..." alt="" coords="513,81,609,108"/>
+<area shape="rect" id="node5" href="$d3/de3/_logger_8hpp.html#aeda367459d679e6d5d4476e7d7aa3963" title="initialize logger for usage " alt="" coords="512,31,611,57"/>
+<area shape="rect" id="node6" href="$df/d0a/main_8cpp.html#a59a5d10c3e8acb2a11dad76e5d644020" title="initProcedure" alt="" coords="661,31,759,57"/>
+<area shape="rect" id="node7" href="$df/d0a/main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="809,56,860,83"/>
+<area shape="rect" id="node9" href="$df/d0a/main_8cpp.html#a0ae2256c09ff62743965e0e07f582b3f" title="exitProcedure" alt="" coords="659,81,761,108"/>
+</map>

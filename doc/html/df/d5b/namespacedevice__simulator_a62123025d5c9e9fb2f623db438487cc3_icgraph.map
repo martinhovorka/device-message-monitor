@@ -1,0 +1,6 @@
+<map id="device_simulator.random_boolean" name="device_simulator.random_boolean">
+<area shape="rect" id="node2" href="$df/d08/classdevice__simulator_1_1_device.html#a05fef977bb7810e268f25b79cfedc9de" title="device_simulator.Device.\l__generate_current_measurement" alt="" coords="221,5,440,47"/>
+<area shape="rect" id="node3" href="$df/d08/classdevice__simulator_1_1_device.html#adf7758acdc7d2e831cc3f9275abe9fcc" title="device_simulator.Device.generate\l_message" alt="" coords="489,97,708,139"/>
+<area shape="rect" id="node4" href="$df/d08/classdevice__simulator_1_1_device.html#a5260bbe263665106b72ac295b5d50f53" title="device_simulator.Device.\l__generate_temperature\l_measurement" alt="" coords="246,122,415,178"/>
+<area shape="rect" id="node5" href="$df/d08/classdevice__simulator_1_1_device.html#afd28b25f2bfaf0a8826f5f4f78c1eec1" title="device_simulator.Device.\l__generate_voltage_measurement" alt="" coords="220,203,441,244"/>
+</map>

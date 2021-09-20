@@ -1,0 +1,6 @@
+<map id="sighandler::SignalHandler::isValidSignalNumber" name="sighandler::SignalHandler::isValidSignalNumber">
+<area shape="rect" id="node2" href="$d9/db5/classsighandler_1_1_signal_handler.html#abadc0a7a04c953a61bc3c807cdf94f70" title="remove actual siignal handler and restore the previous " alt="" coords="224,5,395,47"/>
+<area shape="rect" id="node3" href="$d9/db5/classsighandler_1_1_signal_handler.html#a77911d973919274e62f35e6226613213" title="set neẃ signal handler saving the previoius one " alt="" coords="224,71,395,112"/>
+<area shape="rect" id="node4" href="$d9/db5/classsighandler_1_1_signal_handler.html#af6e92f781f1e28b01fa49b07060c0708" title="set the same handler for all signals " alt="" coords="443,100,613,141"/>
+<area shape="rect" id="node5" href="$d9/db5/classsighandler_1_1_signal_handler.html#ab48734d80766d73c85f0dfd9e3c332cc" title="Construct a new Signal Handler object. " alt="" coords="224,188,395,229"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="exitProcedure" name="exitProcedure">
+<area shape="rect" id="node2" href="$de/d27/_logger_8cpp.html#a664f9cf48341e0b23122227e55a620b6" title="function de&#45;initializes logger (writes all remaining message to stream a release resources) ..." alt="" coords="156,56,252,83"/>
+<area shape="rect" id="node3" href="$de/d27/_logger_8cpp.html#a7b0614b46b009eec456e166c4010757e" title="lockLoggerData" alt="" coords="307,5,420,32"/>
+<area shape="rect" id="node4" href="$de/d27/_logger_8cpp.html#aeeb83b8b6ec1dbdf1a3e72fc836caef6" title="unlockLoggerData" alt="" coords="300,56,427,83"/>
+<area shape="rect" id="node5" href="$de/d27/_logger_8cpp.html#a11eaecfa4e0eaee60ec32d2aa435f0ef" title="writeMessage" alt="" coords="312,107,415,133"/>
+<area shape="rect" id="node6" href="$de/d27/_logger_8cpp.html#a295eb774fde642a4021e2c059844bb69" title="lockStream" alt="" coords="482,81,570,108"/>
+<area shape="rect" id="node7" href="$de/d27/_logger_8cpp.html#a923bd0383982e840b71866e794fa1405" title="unlockStream" alt="" coords="475,132,577,159"/>
+</map>

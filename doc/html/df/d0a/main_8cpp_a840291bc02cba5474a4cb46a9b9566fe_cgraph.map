@@ -1,0 +1,38 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$df/d0a/main_8cpp.html#a0ae2256c09ff62743965e0e07f582b3f" title="exitProcedure" alt="" coords="109,95,211,121"/>
+<area shape="rect" id="node9" href="$de/d6b/class_application.html#a46e8ee5d5e4d04679c826ad23a287f2b" title="Application::get" alt="" coords="557,259,669,285"/>
+<area shape="rect" id="node10" href="$df/d0a/main_8cpp.html#a59a5d10c3e8acb2a11dad76e5d644020" title="initProcedure" alt="" coords="111,183,209,209"/>
+<area shape="rect" id="node19" href="$de/d6b/class_application.html#a7fbff10e3b66542f549f6c693ec4e676" title="Application::run" alt="" coords="104,436,216,463"/>
+<area shape="rect" id="node3" href="$de/d27/_logger_8cpp.html#a664f9cf48341e0b23122227e55a620b6" title="function de&#45;initializes logger (writes all remaining message to stream a release resources) ..." alt="" coords="565,56,661,83"/>
+<area shape="rect" id="node4" href="$de/d27/_logger_8cpp.html#a7b0614b46b009eec456e166c4010757e" title="lockLoggerData" alt="" coords="813,5,927,32"/>
+<area shape="rect" id="node5" href="$de/d27/_logger_8cpp.html#aeeb83b8b6ec1dbdf1a3e72fc836caef6" title="unlockLoggerData" alt="" coords="807,107,933,133"/>
+<area shape="rect" id="node6" href="$de/d27/_logger_8cpp.html#a11eaecfa4e0eaee60ec32d2aa435f0ef" title="writeMessage" alt="" coords="819,56,921,83"/>
+<area shape="rect" id="node7" href="$de/d27/_logger_8cpp.html#a295eb774fde642a4021e2c059844bb69" title="lockStream" alt="" coords="1080,19,1168,45"/>
+<area shape="rect" id="node8" href="$de/d27/_logger_8cpp.html#a923bd0383982e840b71866e794fa1405" title="unlockStream" alt="" coords="1073,69,1175,96"/>
+<area shape="rect" id="node11" href="$d9/db5/classsighandler_1_1_signal_handler.html#a9414881bcdac4fbb6c3f4c560812e5e7" title="get singleton instance " alt="" coords="264,157,460,184"/>
+<area shape="rect" id="node12" href="$de/d27/_logger_8cpp.html#aeda367459d679e6d5d4476e7d7aa3963" title="initialize logger for usage " alt="" coords="313,107,411,133"/>
+<area shape="rect" id="node17" href="$df/d0a/main_8cpp.html#adad1029c9dc4631507923fa3ed8ba868" title="signalHandler" alt="" coords="311,208,413,235"/>
+<area shape="rect" id="node13" href="$de/d27/_logger_8cpp.html#aa4df9360b15f4315ce68c9dc16bbd996" title="loggerThreadBody" alt="" coords="549,107,676,133"/>
+<area shape="rect" id="node14" href="$de/d27/_logger_8cpp.html#adba7e7852defaa150e7be9b81114fd62" title="popMessage" alt="" coords="822,157,918,184"/>
+<area shape="rect" id="node15" href="$de/d27/_logger_8cpp.html#a16c9d4e11162a42fdf0c5a47f4797336" title="lockLoggerQueue" alt="" coords="1063,145,1185,172"/>
+<area shape="rect" id="node16" href="$de/d27/_logger_8cpp.html#aa47defada9b881330abec76ff50b017c" title="unlockLoggerQueue" alt="" coords="1055,196,1193,223"/>
+<area shape="rect" id="node18" href="$de/d6b/class_application.html#a7a9e487106abcd163331ad98910cc48f" title="Application::stop" alt="" coords="553,208,672,235"/>
+<area shape="rect" id="node20" href="$d3/d5f/class_abstract_a_p_i.html#a9549b687af4bbeea35907cf5297d69c9" title="common implementation of API start procedure " alt="" coords="299,385,425,412"/>
+<area shape="rect" id="node26" href="$d3/df5/class_message_processor.html#a1af9c4a7a077e73077f2f25cd15a6361" title="start message processor thread " alt="" coords="278,512,446,539"/>
+<area shape="rect" id="node34" href="$d3/df5/class_message_processor.html#af438aaa750f77f32edb7ca09bebd1c46" title="stop message processor " alt="" coords="279,563,445,589"/>
+<area shape="rect" id="node36" href="$d3/d5f/class_abstract_a_p_i.html#a3dc02a0aa489246ab40b17354da90288" title="stop API and deallocate resources " alt="" coords="299,436,425,463"/>
+<area shape="rect" id="node21" href="$d3/d5f/class_abstract_a_p_i.html#aaa52851cc8c8e3b49f134b323b9a4507" title="deviced APIs will implement setup procedures " alt="" coords="537,309,689,336"/>
+<area shape="rect" id="node22" href="$d3/d5f/class_abstract_a_p_i.html#ada2e62db474de8b3aa0ea04e1d759d2e" title="safely sets flag if thread should continue to work " alt="" coords="529,411,697,437"/>
+<area shape="rect" id="node23" href="$d3/d5f/class_abstract_a_p_i.html#a68737cfef2126eddc4f9f2ba4158e4d9" title="thread body representation &#45; a simple loop with no delay " alt="" coords="529,360,696,387"/>
+<area shape="rect" id="node24" href="$d3/d5f/class_abstract_a_p_i.html#a3a221fec07fb867640f701bf3113bee2" title="safely returns flag if thread should continue to work " alt="" coords="786,385,954,412"/>
+<area shape="rect" id="node25" href="$d3/d5f/class_abstract_a_p_i.html#afb7effe52a40bc6ba22120797fd6133b" title="derived API will implement its runtime " alt="" coords="811,335,929,361"/>
+<area shape="rect" id="node27" href="$d3/df5/class_message_processor.html#a081a93455dbac2a750465a3796858d6d" title="Set the Run Flag object. " alt="" coords="508,563,717,589"/>
+<area shape="rect" id="node28" href="$d3/df5/class_message_processor.html#a4a1eaa51c19e417a57f43cff6c459b9b" title="thread body implementation " alt="" coords="509,512,717,539"/>
+<area shape="rect" id="node29" href="$d3/df5/class_message_processor.html#ab0700e40b5ae709cb970294efc37d31f" title="get flag that indicates " alt="" coords="765,461,975,488"/>
+<area shape="rect" id="node30" href="$d3/d5f/class_abstract_a_p_i.html#a4b114a5c2a103d590a4261f5c95123cd" title="Get the next message in message queue. " alt="" coords="770,512,970,539"/>
+<area shape="rect" id="node31" href="$db/d85/class_data_storage.html#add6db588ead8c9218e88cf332b06e985" title="add new record to the datastore " alt="" coords="787,563,953,589"/>
+<area shape="rect" id="node32" href="$dd/d25/namespacefnv.html#a3d5ea8f4e1ac576cc07994d8bc74d051" title="calculate Fnv64a hash from given string " alt="" coords="1079,533,1169,560"/>
+<area shape="rect" id="node33" href="$db/d85/class_data_storage.html#a83711f8d0caac782642317ccba89f6da" title="add measurement record to the database " alt="" coords="1023,585,1225,626"/>
+<area shape="rect" id="node35" href="$d3/df5/class_message_processor.html#ad5470ea591fdda8c4a05391524823a00" title="static method for API to notify message processor that new data are available " alt="" coords="525,613,700,640"/>
+<area shape="rect" id="node37" href="$d3/d5f/class_abstract_a_p_i.html#a0dc4dff87790e5009577d6a6153c7faf" title="derived APIs will implement shutdown procedures " alt="" coords="525,461,701,488"/>
+</map>

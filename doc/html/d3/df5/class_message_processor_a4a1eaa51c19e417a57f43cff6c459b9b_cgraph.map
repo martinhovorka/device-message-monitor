@@ -1,0 +1,7 @@
+<map id="MessageProcessor::threadBody" name="MessageProcessor::threadBody">
+<area shape="rect" id="node2" href="$db/d85/class_data_storage.html#add6db588ead8c9218e88cf332b06e985" title="add new record to the datastore " alt="" coords="283,42,449,69"/>
+<area shape="rect" id="node5" href="$d3/d5f/class_abstract_a_p_i.html#a4b114a5c2a103d590a4261f5c95123cd" title="Get the next message in message queue. " alt="" coords="266,93,466,119"/>
+<area shape="rect" id="node6" href="$d3/df5/class_message_processor.html#ab0700e40b5ae709cb970294efc37d31f" title="get flag that indicates " alt="" coords="261,143,471,170"/>
+<area shape="rect" id="node3" href="$db/d85/class_data_storage.html#a83711f8d0caac782642317ccba89f6da" title="add measurement record to the database " alt="" coords="519,5,721,47"/>
+<area shape="rect" id="node4" href="$dd/d25/namespacefnv.html#a3d5ea8f4e1ac576cc07994d8bc74d051" title="calculate Fnv64a hash from given string " alt="" coords="575,71,665,98"/>
+</map>
