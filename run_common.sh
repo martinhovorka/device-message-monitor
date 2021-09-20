@@ -1,6 +1,6 @@
 #!/bin/bash
 
-readonly PKGS="g++ make cmake rapidjson-dev librestbed-dev python3"
+readonly PKGS="g++ make cmake rapidjson-dev librestbed-dev python3 bash"
 
 for PKG in $PKGS; do
     if ! dpkg -s "$PKG" &>/dev/null; then

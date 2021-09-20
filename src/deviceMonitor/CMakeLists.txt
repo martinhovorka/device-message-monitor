@@ -9,8 +9,8 @@ set(
     Application.cpp
     apis/AbstractAPI.cpp
     apis/RestAPI.cpp
-    core/MessageProcessor.cpp
-    core/DataStorage.cpp
+    middleware/MessageProcessor.cpp
+    storage/DataStorage.cpp
 )
 
 set(

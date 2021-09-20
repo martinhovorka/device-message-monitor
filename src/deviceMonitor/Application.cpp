@@ -19,7 +19,13 @@ int Application::run(void)
     }
 
     bool apiStarted(api->start());
-    bool processorStarted(processor->start());
+
+    bool processorStarted(false);
+
+    if (apiStarted)
+    {
+        processorStarted = processor->start();
+    }
 
     if (apiStarted && processorStarted)
     {
@@ -33,7 +39,7 @@ int Application::run(void)
         LOG_MSG_FTL("failed to start api and/or message processor");
         return EXIT_FAILURE;
     }
-
+    
     processor->stop();
     delete processor;
     processor = nullptr;

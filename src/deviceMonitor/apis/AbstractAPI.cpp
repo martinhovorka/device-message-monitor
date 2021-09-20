@@ -1,5 +1,5 @@
 #include "AbstractAPI.hpp"
-#include "../core/MessageProcessor.hpp"
+#include "../middleware/MessageProcessor.hpp"
 
 ////////////////////////////////////////////////////////////////////////////////
 AbstractAPI::AbstractAPI(const std::string &schema) : jsonSchema(schema)

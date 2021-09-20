@@ -3,6 +3,7 @@
 
 #include "../apis/AbstractAPI.hpp"
 #include "fnv.hpp"
+#include "Logger.hpp"
 #include <cinttypes>
 #include <iostream>
 #include <map>
@@ -35,14 +36,12 @@ public:
         std::map<valueId, Value> measurements;
     };
 
-    DataStorage();
-
     /**
      * @brief add new record to the datastore
      *
      * @param newRecord
      */
-    void addRecord(AbstractAPI::pJsonMessage_t newRecord);
+    static void addRecord(AbstractAPI::pJsonMessage_t newRecord);
 
     /**
      * @brief Get the Results object
@@ -53,13 +52,6 @@ public:
 
 private:
     /**
-     * @brief all result in text format TODO: do it in JSON
-     *
-     * @return std::string
-     */
-    std::string getResultString();
-
-    /**
      * @brief add measurement record to the database
      *
      * @param newRecord message that was read from API
@@ -67,7 +59,7 @@ private:
      * @param key JSON key
      * @param id hash of JSON key
      */
-    void addMeasurementRecord(
+    static void addMeasurementRecord(
         AbstractAPI::pJsonMessage_t newRecord,
         std::map<DataStorage::deviceId, DataStorage::DeviceRecord>::iterator device,
         const std::string &key,
@@ -81,13 +73,9 @@ private:
     static const valueId id_voltage;
     static const valueId id_temperature;
 
-    std::mutex dataStoreLock;
-    std::map<deviceId, DeviceRecord> dataStore;
-    uint64_t totalCount = 0;
-
-    // WARNING: hack - quick solution how to access public interface from static context
-    // this will not work for multiple instances
-    static DataStorage *thisStorage;
+    static std::mutex dataStoreLock;
+    static std::map<deviceId, DeviceRecord> dataStore;
+    static uint64_t totalCount;
 };
 
 #endif

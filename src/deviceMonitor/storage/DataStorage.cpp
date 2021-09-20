@@ -1,6 +1,8 @@
 #include "DataStorage.hpp"
 
-DataStorage* DataStorage::thisStorage;
+std::mutex DataStorage::dataStoreLock;
+std::map<DataStorage::deviceId, DataStorage::DeviceRecord> DataStorage::dataStore;
+uint64_t DataStorage::totalCount(0);
 const std::string DataStorage::key_name("name");
 const std::string DataStorage::key_current("current");
 const std::string DataStorage::key_voltage("voltage");
@@ -10,13 +12,8 @@ const DataStorage::valueId DataStorage::id_voltage(fnv::Fnv64a(key_voltage));
 const DataStorage::valueId DataStorage::id_temperature(fnv::Fnv64a(key_temperature));
 
 ////////////////////////////////////////////////////////////////////////////////
-DataStorage::DataStorage()
-{
-    thisStorage = this;
-}
-
-////////////////////////////////////////////////////////////////////////////////
 void DataStorage::addRecord(AbstractAPI::pJsonMessage_t newRecord)
+try
 {
     std::lock_guard<std::mutex> lock(dataStoreLock);
     totalCount++;
@@ -40,7 +37,10 @@ void DataStorage::addRecord(AbstractAPI::pJsonMessage_t newRecord)
     addMeasurementRecord(newRecord, device, key_voltage, id_voltage);
     addMeasurementRecord(newRecord, device, key_temperature, id_temperature);
 }
-
+catch (const std::exception &ex)
+{
+    LOG_FMT_ERR("unable to add new record to storage: %s", ex.what());
+}
 ////////////////////////////////////////////////////////////////////////////////
 void DataStorage::addMeasurementRecord(
     AbstractAPI::pJsonMessage_t newRecord,
@@ -65,7 +65,7 @@ void DataStorage::addMeasurementRecord(
 }
 
 ////////////////////////////////////////////////////////////////////////////////
-std::string DataStorage::getResultString()
+std::string DataStorage::getResults()
 {
     std::lock_guard<std::mutex> lock(dataStoreLock);
     std::stringstream ss;
@@ -85,10 +85,4 @@ std::string DataStorage::getResultString()
     ss << "grandTotal: " << totalCount << std::endl;
 
     return ss.str();
-}
-
-////////////////////////////////////////////////////////////////////////////////
-std::string DataStorage::getResults()
-{
-    return thisStorage->getResultString();
 }

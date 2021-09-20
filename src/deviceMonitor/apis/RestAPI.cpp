@@ -1,5 +1,5 @@
 #include "RestAPI.hpp"
-#include "../core/DataStorage.hpp"
+#include "../storage/DataStorage.hpp"
 
 RestAPI *RestAPI::thisApi;
 
@@ -75,6 +75,8 @@ void RestAPI::postHandler(const std::shared_ptr<restbed::Session> session)
     size_t contentLength;
     request->get_header("Content-Length", contentLength);
 
+    LOG_FMT_DBG("received %u bytes @ POST %s", contentLength, request->get_path().c_str());
+    
     session->fetch(contentLength, [](const std::shared_ptr<restbed::Session> session, const restbed::Bytes &body)
                    {
                        const std::string buffer((char *)body.data(), body.size());

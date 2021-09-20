@@ -8,13 +8,12 @@ given amount of time.
 1) generate random number of devices with random names (default 1-100 devices)
     ... or ...
    generate specific set of named devices
-   1.1) each device can measure from 0 up to three values. What values are 
+   1.1) each device can measure from 0 up to 3 values. What values  
         the device measures is chosen randomly. 
 2) during execution
     2.1) randomly decide if device should generate new message with measurements
     2.2) if decided, randomly decide to generate temperature and/or voltage
          and/or current measurements
-    2.3) if value of measurement exceeds some limit generate fault
     NOTE: message may contain 0 - 3 measured values
 """
 
@@ -215,7 +214,7 @@ class Application:
 
     def __init__(self,
                  max_random_devices=100,
-                 runtime=1,
+                 runtime=10,
                  timeout=0.001,
                  address="127.0.0.1",
                  port=50000,
@@ -281,6 +280,8 @@ class Application:
             grand_total += _.measurements.total_count
         print("GRAND TOTAL", grand_total)
 
+        time.sleep(2) # insert little timeout before we get complete results
+
         print()
         print("<<<<< GET /device/results >>>>>")
 
@@ -300,5 +301,8 @@ class Application:
 
 APP = Application(
     device_names=["device-1", "device-2", "device-3", "device-4"])
+
+#APP = Application()
+
 APP.run()
 APP.print_results()

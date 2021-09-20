@@ -3,8 +3,9 @@
 
 #include "apis/AbstractAPI.hpp"
 #include "apis/RestAPI.hpp"
+#include "middleware/MessageProcessor.hpp"
+#include "storage/DataStorage.hpp"
 #include "Logger.hpp"
-#include "core/MessageProcessor.hpp"
 #include <thread>
 
 class Application final
@@ -48,6 +49,7 @@ private:
     // TODO: we use only one API in this example; we should use much smarter solution
     AbstractAPI *api = nullptr;
     MessageProcessor *processor = nullptr;
+    DataStorage storage;
     bool runApplication = true;
 };
 

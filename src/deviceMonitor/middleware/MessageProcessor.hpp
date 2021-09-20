@@ -2,7 +2,6 @@
 #define MESSAGEPROCESSOR_HPP
 
 #include "../apis/AbstractAPI.hpp"
-#include "DataStorage.hpp"
 #include <condition_variable>
 #include <iostream>
 #include <mutex>
@@ -40,13 +39,6 @@ public:
      */
     static void notify();
 
-    /**
-     * @brief Get the Data Store object
-     *
-     * @return const DataStorage&
-     */
-    DataStorage &getDataStore();
-
 private:
     /**
      * @brief thread body implementation
@@ -71,8 +63,7 @@ private:
     void setRunFlag(const bool value);
 
     AbstractAPI *api;
-    DataStorage ds;
-
+    
     static std::mutex processLock;
     static std::condition_variable processCondition;
 

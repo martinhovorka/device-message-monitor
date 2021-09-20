@@ -1,4 +1,5 @@
 #include "MessageProcessor.hpp"
+#include "../storage/DataStorage.hpp"
 
 std::mutex MessageProcessor::processLock;
 std::condition_variable MessageProcessor::processCondition;
@@ -65,7 +66,7 @@ void MessageProcessor::threadBody(MessageProcessor *thisProcessor)
             }
         }
 
-        thisProcessor->ds.addRecord(message);
+        DataStorage::addRecord(message);
     }
 }
 
@@ -81,10 +82,4 @@ void MessageProcessor::setRunFlag(const bool value)
 {
     std::lock_guard<std::mutex> lock(runFlagLock);
     runFlag = value;
-}
-
-////////////////////////////////////////////////////////////////////////////////
-DataStorage &MessageProcessor::getDataStore()
-{
-    return ds;
 }
